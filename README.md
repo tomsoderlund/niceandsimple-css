@@ -1,5 +1,7 @@
 # Nice & Simple CSS framework
 
+Demo: https://tomsoderlund.github.io/niceandsimple-css/
+
 Install:
 
     yarn add niceandsimple-css
