@@ -10,16 +10,29 @@
 
 /* #NiceAndSimple: Main - margin:auto */
 main {
-  margin: 0.5em auto;
+  margin: 0 auto;
+  padding: 1em 0;
   width: 80%;
-  max-width: 600px;
 }
 
 @media only screen and (max-width: 480px) {
   main {
-    width: 95%;
+    width: 100%;
     max-width: none;
+    padding: 1em;
   }
+}
+
+main.has-header {
+  padding-top: calc(1em + 50px);
+}
+
+main.has-footer {
+  padding-bottom: calc(1em + 35px);
+}
+
+main > *:first-child {
+  margin-top: 0;
 }
 
 /* ----- Typography ----- */
@@ -60,9 +73,8 @@ label.flex {
   justify-content: center;
   align-items: center;
   margin: auto;
-  max-width: 20em;
 }
-label.flex input {
+label.flex input:not([type="radio"]):not([type="checkbox"]) {
   width: auto;
   flex: 1;
 }
@@ -118,8 +130,8 @@ a.button {
   text-decoration: none;
 }
 
-button.primary:not(:disabled) {
-  background-color: #FF3E00;
+button:not(.primary):not(:disabled) {
+  filter: saturate(50%);
 }
 
 /* #NiceAndSimple: Input and Dropdown Menu - https://codepen.io/tomsoderlund/pen/GNBbWz */
@@ -140,7 +152,7 @@ select {
   font-size: inherit;
   font-weight: inherit;
   padding: 0.6em;
-  margin-right: 0.6em;
+  margin: 0.2em;
   min-width: 15em;
 }
 input::placeholder,
@@ -171,6 +183,14 @@ select:disabled {
   color: darkgray;  
 }
 
+@media only screen and (max-width: 480px) {
+  button,
+  input:not([type="radio"]):not([type="checkbox"]) {
+    width: 100%;
+    margin: 0.2em 0;
+  }
+}
+
 /* #NiceAndSimple: Tag */
 .tag {
   display: inline-block;
@@ -194,7 +214,7 @@ select:disabled {
   background-color: limegreen;
 }
 
-/* #NiceAndSimple: List
+/* #NiceAndSimple: List */
 ol {
   list-style-type: decimal;
   list-style-position: inside;
@@ -229,8 +249,38 @@ hr {
 
 /* #NiceAndSimple: Radio Button */
 .input-wrapper {
-  margin: 0.2em;
+  margin: 1em 0;
 }
 .input-wrapper label {
   margin-right: 1em;
+}
+
+/* #NiceAndSimple: Header */
+header,
+footer {
+  background-color: darkgray;
+  color: white;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* iOS Web Apps */
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+footer {
+  top: unset;
+  bottom: 0;
+  height: 35px;
 }
