@@ -1,0 +1,7 @@
+{
+  "name": "niceandsimple-css",
+  "version": "1.0.0",
+  "description": "Nice & Simple CSS framework",
+  "main": "niceandsimple.css",
+  "license": "MIT"
+}
