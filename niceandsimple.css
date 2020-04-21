@@ -231,7 +231,7 @@ select:disabled {
 /* #NiceAndSimple: Tag */
 .tag {
   display: inline-block;
-  cursor: pointer;
+  cursor: default;
   padding: 0.6em 1em;
   background-color: deepskyblue;
   color: white;
@@ -244,11 +244,27 @@ select:disabled {
   text-transform: capitalize;
   transition: all 0.2s;
 }
-.tag:hover:not(:disabled) {
-  opacity: 0.8;
+.tag.selectable {
+  cursor: pointer;
+}
+.tag.selectable:hover:not(.disabled) {
+  filter: brightness(115%);
 }
 .tag.new {
   background-color: limegreen;
+}
+
+.tag .x-button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0.1em;
+  margin: 0;
+  margin-left: 0.2em;
+}
+.tag .x-button:before {
+  content: '✖';
+  color: white;
 }
 
 /* #NiceAndSimple: List */
