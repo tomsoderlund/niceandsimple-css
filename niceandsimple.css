@@ -13,6 +13,7 @@ main {
   margin: 0 auto;
   padding: 1em 0;
   width: 80%;
+  max-width: 800px;
   min-height: 100vh;
 }
 
@@ -104,19 +105,6 @@ a:hover {
   filter: brightness(125%);
 }
 
-/* #NiceAndSimple: Label flex */
-label.flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-}
-label.flex input:not([type="radio"]):not([type="checkbox"]) {
-  width: auto;
-  flex: 1;
-}
-
 /* #NiceAndSimple: Button - https://codepen.io/tomsoderlund/pen/qqyzqp */
 button,
 .button {
@@ -172,6 +160,33 @@ button:not(.primary):not(:disabled) {
   filter: saturate(50%);
 }
 
+/* fieldset flexbox bug */
+fieldset,
+.fieldset {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 2em;
+}
+
+fieldset > *,
+.fieldset > * {
+  flex: 2;
+}
+
+fieldset > label,
+.fieldset > label,
+fieldset > span,
+.fieldset > span {
+  flex: 1;
+}
+
+legend {
+  font-weight: bold;
+}
+
 /* #NiceAndSimple: Input and Dropdown Menu - https://codepen.io/tomsoderlund/pen/GNBbWz */
 input:not([type="radio"]):not([type="checkbox"]),
 .input,
@@ -223,10 +238,28 @@ select:disabled {
 
 @media only screen and (max-width: 480px) {
   button,
-  input:not([type="radio"]):not([type="checkbox"]) {
+  input:not([type="radio"]):not([type="checkbox"]),
+  .input,
+  textarea,
+  select {
     width: 100%;
     margin: 0.2em 0;
   }
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-left: 1em;
+}
+
+input[type="radio"]:first-child,
+input[type="checkbox"]:first-child {
+  margin-left: unset;
+}
+
+.radio-wrapper,
+.checkbox-wrapper {
+  margin-right: 1em;
 }
 
 /* #NiceAndSimple: Tag */
@@ -239,6 +272,7 @@ select:disabled {
   font-size: 0.9em;
   padding: 0.2em 0.7em;
   margin-right: 0.2em;
+  margin-bottom: 0.4em;
   border-radius: 2em;
   border: 1px solid rgba(0,0,0, 0.2);
   text-decoration: none;
@@ -299,12 +333,4 @@ hr {
   height: 1px;
   margin: 0.3em 0;
   background: rgba(0,0,0, 0.2);
-}
-
-/* #NiceAndSimple: Radio Button */
-.input-wrapper {
-  margin: 1em 0;
-}
-.input-wrapper label {
-  margin-right: 1em;
 }

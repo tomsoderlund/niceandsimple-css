@@ -1,18 +1,15 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Nice & Simple CSS</title>
-<meta name="description" content="niceandsimple-css"/>
-<meta charSet="utf-8"/>
-<meta http-equiv="content-language" content="en"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-<meta property="og:title" content="Nice & Simple CSS"/>
-<meta property="og:description" content="niceandsimple-css"/>
-<meta property="og:locale" content="en_US"/>
-<link rel="shortcut icon" type="image/x-icon" href="./icon.png"/>
-<link rel="stylesheet" href="./niceandsimple.css"/>
-<style type="text/css">
-</style>
+  <title>Nice & Simple CSS</title>
+  <meta name="description" content="niceandsimple-css"/>
+  <meta charSet="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta property="og:title" content="Nice & Simple CSS"/>
+  <meta property="og:description" content="niceandsimple-css"/>
+  <meta property="og:locale" content="en_US"/>
+  <link rel="shortcut icon" type="image/x-icon" href="./icon.png"/>
+  <link rel="stylesheet" href="./niceandsimple.css"/>
 </head>
 
 <body>
@@ -37,45 +34,54 @@
     <button disabled>Disabled</button>
 
     <h2>Forms</h2>
-    <form action="/endpoint">
-      <label class="flex">
-        Email:
-        <input type="email" autocomplete="email" placeholder="Your email" required />
-      </label>
+    <form>
+      <div class="fieldset">
+        <label for="emailField">Email:</label>
+        <input id="emailField" type="email" autocomplete="email" placeholder="Your email" required />
+      </div>
 
-      <label class="flex">
-        Textarea:
-        <textarea placeholder="Description"></textarea>
-      </label>
+      <div class="fieldset">
+        <label for="textareaField">Textarea:</label>
+        <textarea id="textareaField" placeholder="Description"></textarea>
+      </div>
 
-      <label class="flex">
-        Select:
-        <select>
+      <div class="fieldset">
+        <label for="selectField">Select:</label>
+        <select id="selectField">
           <option value="sam">Sam Lowry</option>
           <option value="harry" selected>Harry Tuttle</option>
           <option value="ida" disabled>Ida Lowry</option>
         </select>
-      </label>
-
-      <div class="input-wrapper">
-        <label>
-          <input type="radio" name="fruit" id="apple" value="apple" checked>
-          Apple
-        </label>
-        <label>
-          <input type="radio" name="fruit" id="banana" value="banana">
-          Banana
-        </label>
       </div>
 
-      <div class="input-wrapper">
-        <label>
-          <input type="checkbox" name="vehicle" value="Bike">
-          Checkbox
-        </label>
+      <div class="fieldset">
+        <label>Fruit:</label>
+        <div>
+          <span class="radio-wrapper">
+            <input type="radio" name="fruit" id="apple" value="apple" checked>
+            <label for="apple">Apple</label>
+          </span>
+          <span class="radio-wrapper">
+            <input type="radio" name="fruit" id="banana" value="banana">
+            <label for="banana">Banana</label>
+          </span>
+        </div>
       </div>
 
-      <button type="submit">Submit</button>
+      <div class="fieldset">
+        <label>Vegetables:</label>
+        <div>
+          <span class="checkbox-wrapper">
+            <input type="checkbox" name="avocado" id="avocado" value="Avocado">
+            <label for="avocado">Avocado</label>
+          </span>
+        </div>
+      </div>
+
+      <div class="fieldset">
+        <span></span>
+        <button type="submit">Submit</button>
+      </div>    
     </form>
 
     <h2>Tags</h2>
@@ -87,7 +93,7 @@
       <span class="tag selectable">Selectable</span>
       <span class="tag">With X-Button <span class="x-button"></span></span>
     </div>
-  
+
   </main>
 
   <footer>Made by @tomsoderlund</footer>
