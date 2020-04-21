@@ -58,12 +58,12 @@ h1, h2, h3 {
 a {
   color: dodgerblue;
   text-decoration: none;
-  border-bottom: 1px dotted rgba(30, 143, 255, 0); /* dodgerblue transparent */
+  border-bottom: 1px dotted dodgerblue;
   transition: all 0.2s;
+  cursor: pointer;
 }
 a:hover {
-  opacity: 0.8;
-  border-bottom: 1px dotted dodgerblue;
+  filter: brightness(125%);
 }
 
 /* #NiceAndSimple: Label flex */
