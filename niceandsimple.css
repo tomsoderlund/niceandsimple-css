@@ -16,10 +16,17 @@ main {
 }
 
 @media only screen and (max-width: 480px) {
+  body {
+    background-color: #433998;
+    color: white;
+  }
+
   main {
     width: 100%;
     max-width: none;
     padding: 1em;
+    background-color: white;
+    color: black;
   }
 }
 
@@ -31,8 +38,38 @@ main.has-footer {
   padding-bottom: calc(1em + 35px);
 }
 
-main > *:first-child {
-  margin-top: 0;
+main > h1:first-child {
+  margin-top: 0.3em;
+}
+
+/* #NiceAndSimple: Header */
+header,
+footer {
+  background-color: #433998;
+  color: white;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* iOS Web Apps */
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+footer {
+  top: unset;
+  bottom: 0;
+  height: 35px;
 }
 
 /* ----- Typography ----- */
@@ -253,34 +290,4 @@ hr {
 }
 .input-wrapper label {
   margin-right: 1em;
-}
-
-/* #NiceAndSimple: Header */
-header,
-footer {
-  background-color: darkgray;
-  color: white;
-  position: fixed;
-  z-index: 1000;
-  width: 100%;
-  left: 0;
-  top: 0;
-  height: 50px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  /* iOS Web Apps */
-  -webkit-user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-}
-
-footer {
-  top: unset;
-  bottom: 0;
-  height: 35px;
 }
