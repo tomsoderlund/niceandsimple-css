@@ -285,6 +285,10 @@ input[type="checkbox"]:first-child {
 .tag.selectable:hover:not(.disabled) {
   filter: brightness(115%);
 }
+.tag.selected {
+  background-color: #1299cc;
+  border: 1px solid #1299cc;
+}
 .tag.new {
   background-color: limegreen;
 }
