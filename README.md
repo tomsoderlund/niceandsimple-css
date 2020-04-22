@@ -6,6 +6,7 @@ Design goals:
 
 - A good starting point for any web/mobile/PWA project.
 - Easy to customize. Example: change the color of `button`, and hover states are automatically updated (they use `filter`).
+- Clear interaction states for buttons etc.
 - Avoid weird classes* as much as possible, just use element names.
 - Lightweight (somewhat).
 - Compatible (somewhat).
