@@ -314,8 +314,8 @@ input[type="checkbox"]:first-child {
   filter: brightness(115%);
 }
 .tag.selected {
-  background-color: #1299cc;
-  border: 1px solid #1299cc;
+  background-color: #4a87bf;
+  border: 1px solid #4a87bf;
 }
 .tag.new {
   background-color: limegreen;
