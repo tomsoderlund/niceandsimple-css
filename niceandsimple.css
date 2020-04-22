@@ -328,10 +328,10 @@ input[type="checkbox"]:first-child {
   padding: 0.1em;
   margin: 0;
   margin-left: 0.2em;
+  color: white;
 }
 .tag .x-button:before {
   content: '✖';
-  color: white;
 }
 
 /* #NiceAndSimple: List */
