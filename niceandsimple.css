@@ -87,6 +87,7 @@ footer {
 
 .flex > * {
   flex: 1;
+  width: 100%;
   margin-right: 1em;
 }
 .flex > *:last-child {
