@@ -14,6 +14,12 @@ Design goals:
 *Exceptions: `.fieldset` (because of `fieldset` flexbox bug), `.tag` (tags/tokens), `.flex` (flexbox container for columns etc).
 
 
+## Todo
+
+- Lists
+- Code
+
+
 ## Install
 
     yarn add niceandsimple-css
