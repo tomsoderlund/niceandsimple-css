@@ -47,7 +47,7 @@ main.has-footer {
   padding-bottom: calc(1em + 35px);
 }
 
-main > h1:first-child {
+main h1:first-child {
   margin-top: 0.3em;
 }
 
