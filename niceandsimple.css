@@ -1,9 +1,16 @@
+/* ===== Nice & Simple CSS: https://github.com/tomsoderlund/niceandsimple-css ===== */
+
 /* ----- Reset ----- */
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  touch-action: manipulation;
 }
 
 /* ----- Layout ----- */
