@@ -49,15 +49,30 @@
     <p>Did you know that <a href="https://github.com/tomsoderlund/niceandsimple-css" target="_blank" rel="noopener noreferrer">this is a link</a>?</p>
 
     <h2>Buttons</h2>
-    <button class="primary">Primary</button>
-    <button>Not Primary</button>
+    <button>Primary</button>
+    <button class="secondary">Secondary</button>
     <button disabled>Disabled</button>
 
     <h2>Forms</h2>
     <form>
       <div class="fieldset">
-        <label for="emailField">Email:</label>
-        <input id="emailField" type="email" autocomplete="email" placeholder="Your email" required />
+        <label for="textField">Placeholder:</label>
+        <input id="textField" type="text" autocomplete="name" placeholder="Your name" required />
+      </div>
+
+      <div class="fieldset">
+        <label for="textField">Text:</label>
+        <input id="textField" type="text" autocomplete="name" value="Your name" />
+      </div>
+
+      <div class="fieldset">
+        <label for="readonlyField">Text:</label>
+        <input id="readonlyField" type="text" value="Read only" readonly />
+      </div>
+
+      <div class="fieldset">
+        <label for="disabledField">Text:</label>
+        <input id="disabledField" type="text" value="Disabled" disabled />
       </div>
 
       <div class="fieldset">
