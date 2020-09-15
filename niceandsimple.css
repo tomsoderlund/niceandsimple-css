@@ -136,6 +136,7 @@ a {
   cursor: pointer;
 }
 a:hover {
+  border-bottom-style: solid;
   filter: brightness(125%);
 }
 
@@ -171,12 +172,10 @@ button:focus:not(:disabled),
 button:hover:not(:disabled),
 .button:hover:not(:disabled) {
   filter: brightness(125%);
-  top: -0.1em;
   box-shadow: 0 0.2em 0.1em rgba(0, 0, 0, 0.2);
 }
 button:hover:active,
 .button:hover:active {
-  top: 0.1em;
   box-shadow: 0 0.02em 0.125em rgba(0, 0, 0, 0.4);
   transition: all 0.05s;
 }
