@@ -271,6 +271,7 @@ select:disabled {
 
 @media only screen and (max-width: 480px) {
   button,
+  .button,
   input:not([type="radio"]):not([type="checkbox"]),
   .input,
   textarea,
@@ -293,6 +294,11 @@ input[type="checkbox"]:first-child {
 .radio-wrapper,
 .checkbox-wrapper {
   margin-right: 1em;
+}
+
+.radio-wrapper > label,
+.checkbox-wrapper > label {
+  margin-left: 0.3em;
 }
 
 /* #NiceAndSimple: Tag */
