@@ -154,6 +154,8 @@ button,
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
   font-family: inherit;
   font-size: inherit;
   line-height: normal;
@@ -173,6 +175,9 @@ button:hover:not(:disabled),
 .button:hover:not(:disabled) {
   filter: brightness(125%);
   box-shadow: 0 0.2em 0.1em rgba(0, 0, 0, 0.2);
+}
+.button:hover:not(:disabled) {
+  border-bottom: none;
 }
 button:hover:active,
 .button:hover:active {
