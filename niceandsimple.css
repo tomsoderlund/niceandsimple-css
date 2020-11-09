@@ -120,7 +120,17 @@ p {
   line-height: 1.4em;
 }
 
-h1, h2, h3 {
+/* #NiceAndSimple: List */
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  margin-left: 1.5em;
+  margin-bottom: 0.4em;
+}
+
+h1, h2, h3, h4, h5 {
   line-height: 1.1em;
   margin: 1.1em 0 0.4em;
 }
@@ -219,6 +229,7 @@ fieldset > label,
 fieldset > span,
 .fieldset > span {
   flex: 1;
+  margin-right: 0.3em;
 }
 
 legend {
@@ -347,12 +358,6 @@ input[type="checkbox"]:first-child {
 }
 .tag .x-button:before {
   content: '✖';
-}
-
-/* #NiceAndSimple: List */
-ol {
-  list-style-type: decimal;
-  list-style-position: inside;
 }
 
 /* #NiceAndSimple: Table - https://codepen.io/tomsoderlund/pen/mmZrRR */
